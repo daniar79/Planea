@@ -1,0 +1,2 @@
+Módulo que genera opiniones aleatorias dentro del index
+Se usa creando un include dentro del template donde se quiera usar.

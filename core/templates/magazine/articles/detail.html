@@ -1,0 +1,35 @@
+{% extends 'layout/base.html' %} {% block title %} {{article.title}}
+<!---->
+{% endblock%} {% block content %}
+<!-- Heading -->
+<div id="heading">
+  <h1>Magazine</h1>
+</div>
+<!-- Main -->
+<section id="main" class="wrapper">
+  <div class="inner">
+    <div class="content">
+      <header>
+        <h1 class="title">{{article.title}}</h1>
+        <p class="date">{{article.published|date}} | {{article.user}}</p>
+        <strong class="d-inline-block mb-2 text-primary"> {% for category in article.categories.all %}
+          <a href="{% url 'categorias' category.id %}"><span style="color: gray">{{category}}</span></a
+      >
+          {% if forloop.counter < article.categories.all|length%}
+      <!---->
+      {{ ','}} {%endif%} {% endfor %}</strong>
+      </header>
+      <!--Creamos la condición de que si existe imagen la cargue-->
+      {% if article.image != 'null' and article.image.url %}
+      <div class="imagen-articulo col-4-lg">
+        <img src="{{article.image.url}}" width="400" />
+      </div>
+      {% endif%}
+      <p class="entrada col-8-lg">{{article.lead|safe}}</p>
+      <hr />
+      <p class="contenido">{{article.content|safe}}</p>
+    </div>
+  </div>
+</section>
+
+{% endblock content %}

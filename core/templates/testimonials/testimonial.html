@@ -1,0 +1,36 @@
+{% block testimonial %}
+<!-- Testimonials -->
+<section class="wrapper">
+  <div class="inner">
+    <header class="special">
+      <h2>Tu opinión importa</h2>
+      <p>
+        Queremos que nos cuentes como te lo pasas en nuestra ciudad, comentalo y
+        participa en nuestra web. Tus comentarios aparecerán en nuestra web.
+        {{products}}
+      </p>
+    </header>
+    <div class="testimonials">
+      <!--Para que no se formatee-->
+      {% for testimonial in testimonials %}
+      <section>
+        <div class="content">
+          <blockquote>
+            <p>{{testimonial.content}}</p>
+          </blockquote>
+          <div class="author">
+            <div class="image">
+              <img src="{{testimonial.imagen.url}}" alt="" />
+            </div>
+            <p class="credit">
+              <strong>{{testimonial.autor}}</strong>
+              <span>{{testimonial.profesion_localidad}}</span>
+            </p>
+          </div>
+        </div>
+      </section>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+{% endblock testimonial %}

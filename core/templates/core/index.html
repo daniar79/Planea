@@ -1,0 +1,134 @@
+{% extends 'layout/base.html' %}{% load static %}
+<!---->
+{% block content %}
+<!-- Banner -->
+<section id="banner">
+  <div class="inner">
+    <img src="{% static '/images/planea_logo.png'%}"" alt="logo" />
+    <p>
+      El lugar donde cominezan los planes...<br />
+      Siguenos en las redes sociales, y está al día con lo que sucede en nuestra
+      ciudad.
+    </p>
+  </div>
+  <video
+    autoplay
+    loop
+    muted
+    playsinline
+    src="{% static '/video/banner.mp4'%}"
+  ></video>
+</section>
+
+<!-- Highlights -->
+<section class="wrapper">
+  <div class="inner">
+    <header class="special">
+      <h2>Encuentra lo que necesitas</h2>
+      <p>
+        Navega por nuestras secciones, y adentrate en en la web. <br />
+        Te ayudaremos a conocer, y está al día de lo que sucede en nuestra
+        ciudad.
+      </p>
+    </header>
+    <div class="highlights">
+      <section>
+        <div class="content">
+          <header>
+            <a href="#" class="icon fa-street-view"
+              ><span class="label">Icon</span></a
+            >
+            <h3>Guías y rutas</h3>
+          </header>
+          <p>
+            Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing
+            gravida odio porttitor sem non mi integer non faucibus.
+          </p>
+        </div>
+      </section>
+      <section>
+        <div class="content">
+          <header>
+            <a href="{% url 'lista articulos' %}" class="icon fa-newspaper-o"
+              ><span class="label">Icon</span></a
+            >
+            <h3>Magazine</h3>
+          </header>
+          <p>
+            Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing
+            gravida odio porttitor sem non mi integer non faucibus.
+          </p>
+        </div>
+      </section>
+      <section>
+        <div class="content">
+          <header>
+            <a href="#" class="icon fa-calendar-o"
+              ><span class="label">Icon</span></a
+            >
+            <h3>Eventos</h3>
+          </header>
+          <p>
+            Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing
+            gravida odio porttitor sem non mi integer non faucibus.
+          </p>
+        </div>
+      </section>
+      <section>
+        <div class="content">
+          <header>
+            <a href="#" class="icon fa-cloud-sun-rain"
+              ><span class="label">Icon</span></a
+            >
+            <h3>El tiempo</h3>
+          </header>
+          <p>
+            Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing
+            gravida odio porttitor sem non mi integer non faucibus.
+          </p>
+        </div>
+      </section>
+      <section>
+        <div class="content">
+          <header>
+            <a href="#" class="icon fa-taxi"><span class="label">Icon</span></a>
+            <h3>Servicios</h3>
+          </header>
+          <p>
+            Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing
+            gravida odio porttitor sem non mi integer non faucibus.
+          </p>
+        </div>
+      </section>
+      <section>
+        <div class="content">
+          <header>
+            <a href="#" class="icon fa-shield-virus"
+              ><span class="label">Icon</span></a
+            >
+            <h3>Medidas COVID-19</h3>
+          </header>
+          <p>
+            Nunc lacinia ante nunc ac lobortis ipsum. Interdum adipiscing
+            gravida odio porttitor sem non mi integer non faucibus.
+          </p>
+        </div>
+      </section>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta" class="wrapper">
+  <div class="inner">
+    <h2>Pasea por nuestros rincones.</h2>
+    <p>
+      Disfruta paseando, montaando en bici,... por nuestro fantástico Paseo
+      Marítimo. Toma el sol en nuestras playas. Ve de tiendas por el "centro
+      abierto de la ciudad". Tomate un caña con un espeto en un chiringuito.
+      Lleva a tu perro a nustros parque caninos... Haz lo que te plazca y
+      disfruta de nuestor sol de ciudad. ¡Bienvenidos!
+    </p>
+  </div>
+</section>
+{% include 'testimonials/testimonial.html' %} {% endblock content %}

@@ -1,0 +1,16 @@
+{% extends 'layout/base.html' %}{% load static %}
+{% block title %} {{title}} {%endblock %} {% block content %}
+
+<!-- Heading -->
+<div id="heading">
+  <h1>Magazine</h1>
+</div>
+<!-- Main -->
+<section id="main" class="wrapper">
+  <div class="inner">
+    <div class="content">{%include 'magazine/articles/arts.html' %}</div>
+  </div>
+</section>
+{% include 'magazine/articles/paginacion.html' %}
+
+{% endblock %}

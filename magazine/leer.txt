@@ -1,0 +1,2 @@
+Módulo con funcionalidaad tipo blog.
+Se crea con categorías y artícluos y paginación.
